@@ -5,17 +5,50 @@
 a = {'apple':"fruit", "beetroot":"vegetable"}
 a['doughnut']= "snack"
 
-print(a)
-print(a['doughnut'])
+a.pop("apple")  # removing items (key name)
+
+# del a       # delete dictionary completely
+
+a2 = a.copy()  # copy method
+print(a2)
+
+a3 = dict(a)
+print(a3)
+print('above are two methods of copying ')
+
+#print(a)
+#print(a['doughnut'])
 #print(a[0])  # error /KeyError: 0/
 
 a['exemple'] = [4,5.1]
 
+# from   https://www.w3schools.com/python/python_dictionaries.asp
+
+for i in a:      # key in loop
+    print(i)
+print('///') # interlude
+
+for i in a:      # value in loop
+    print(a[i])
+print('///')
+for i in a.values():  # value in loop (another possibility)
+    print(i)
+print('///')
+
+print(len(a))  # directory length
+print('///')
+
+
 del a['doughnut']
-print(a)
+#print(a)
+
+for k,v in a.items(): # itens method
+    print(k,v)
+print('//')
+
 
 #a.clear()
-print(a)
+#print(a)
 #del a
 
 print(a.keys())
