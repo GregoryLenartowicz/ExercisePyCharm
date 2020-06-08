@@ -88,3 +88,27 @@ print(s)
 
 # 5.5. Dictionaries  https://docs.python.org/3.8/tutorial/datastructures.html?highlight=dictionary#dictionaries
 
+
+# nested dictionaries
+
+myfamily = {'child1' :{'name': 'Emily', 'year': 2000
+            },'child2': { 'name': "Tobias", 'year': 2010},
+            'child': {'name': 'Jordan', 'year': 2020}}
+print(myfamily)
+
+print('//')
+a = myfamily.values()
+b = myfamily.keys()
+print(a)
+print(b)
+print('//')
+
+c = myfamily.get('child')  # get method
+print(c)
+
+
+# from: https://www.datacamp.com/community/tutorials/python-dictionary-comprehension#pdc
+
+# the general template for dictionary comprehension
+# dict_variable = {key:value for (key,value) in dictonary.items()}
+
