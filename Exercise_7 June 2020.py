@@ -110,5 +110,32 @@ print(c)
 # from: https://www.datacamp.com/community/tutorials/python-dictionary-comprehension#pdc
 
 # the general template for dictionary comprehension
-# dict_variable = {key:value for (key,value) in dictonary.items()}
+# dict_variable = {key:value for (key,value) in dictionary.items()}
+
+ty = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f':6}
+
+tyx = { k : v*3 for (k,v) in ty.items()}
+print(tyx)
+
+# from    https://www.datacamp.com/community/tutorials/python-dictionary-comprehension#pdc
+
+# check for items greater then 3
+
+dict_1cond = { k:v for (k,v) in ty.items() if v>3}  # check by value
+print(dict_1cond)
+
+dict_2cond = {k:v for (k,v) in tyx.items() if k=="d"} # check by key
+print(dict_2cond)
+
+dict_3cond = { k:v for (k,v) in ty.items() if v>2 if v%2==0 if v%3==0}
+print(dict_3cond)
+
+
+# nested dictionary comprehension
+
+nested_dict = {'first':{'a':1}, 'secend':{'b':2}}
+
+float_dict = {outer_k: {float(inner_v) for (inner_k, inner_v) in outer_v.items() }
+              for ( outer_k, outer_v) in nested_dict.items()}
+print(float_dict)
 
